@@ -14,5 +14,9 @@
     "TypeScript"
   ],
   "author": "DevXanderCode",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "react": "^18.2.0",
+    "typescript": "^5.2.2"
+  }
 }
