@@ -1,8 +1,8 @@
 const path = require("path");
 
-module.export = {
+module.exports = {
   mode: "development",
-  entry: "src/test.tsx",
+  entry: "./src/test.tsx",
   module: {
     rules: [
       {
@@ -20,3 +20,5 @@ module.export = {
     path: path.resolve(__dirname, "dist"),
   },
 };
+
+// webpack-dev-server --open --mode development --hot
