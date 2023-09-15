@@ -1,8 +1,13 @@
 import React from "react";
 import ReactDom from "react-dom";
+import { createRoot } from "react-dom/client";
 
 const Popup = () => <p>Popup page</p>;
 
-ReactDom.render(Popup, document.body);
+const container = document.createElement("div");
+document.body.appendChild(container);
+const root = createRoot(container);
+// ReactDom.render(Popup, root);
+root.render(<Popup />);
 
 export default Popup;
