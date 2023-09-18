@@ -16,6 +16,14 @@ module.exports = {
         test: /\.tsx?$/,
         exclude: /node_modules/,
       },
+      {
+        use: ["style-loader", "css-loader"],
+        test: /\.css?$/i,
+      },
+      {
+        type: "asset/resource",
+        test: /\.(jpg|jpeg|png|woff|woff2|eot|ttf|svg)$/,
+      },
     ],
   },
   plugins: [
@@ -27,16 +35,6 @@ module.exports = {
         },
       ],
     }),
-    // new HtmlPlugin({
-    //   title: "React Extension",
-    //   filename: "popup.html",
-    //   chunks: ["popup"],
-    // }),
-    // new HtmlPlugin({
-    //   title: "React Extension",
-    //   filename: "options.html",
-    //   chunks: ["options"],
-    // }),
     ...getHtmlPlugins(["popup", "options"]),
   ],
   resolve: {
